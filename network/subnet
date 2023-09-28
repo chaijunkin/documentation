@@ -1,0 +1,15 @@
+1 Infrastructure (firewall/router/switches/APs)
+
+10 Services (homelab stuff, outbound via proxy only)
+
+20 Trusted (PCs/Tablets/Phones, allow out to any)
+
+30 Untrusted (Guest wifi etc, allow out to internet, block to other VLANs)
+
+40 IoT (trusted smart devices that need internet access, allow out to internet, Home Assistant, and NAS)
+
+50 NoT (isolated smart devices like CCTV cams, allow out to HA and NAS only, no internet)
+
+70 Trusted devices connected remotely via Wireguard (allow out to any)
+
+99 Outbound VPN (primarily for sailing the high seas or evading geoblocking, allow out to internal VLANs and internet routed via VPN gateway, block out to WAN gateway)
