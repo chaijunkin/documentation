@@ -8,3 +8,7 @@ Software delivery concept:
 4) DevOps
 5) IaC, GitOps
 6) etc.
+
+# Reference
+
+https://github.com/squidfunk/mkdocs-material

@@ -1,0 +1,32 @@
+SWITCH Port 8 <==> PFSENSE ROUTER LAN
+
+
+1
+Infrastructure (firewall/router/switches)
+
+30 INFRA_LAN
+Infrastructure Hosting service (homelab stuff, outbound via proxy only)
+
+10.10.22.1/24
+
+20 TRUSTED_AP
+Trusted AP Device (PCs/Tablets/Phones, allow out to any)
+
+100 TRUSTED_LAN
+Trusted LAN Device (PCs/Tablets/Phones, allow out to any)
+
+70 IoT_AP
+IoT Network (trusted smart devices that need internet access, allow out to internet, Home Assistant, and NAS)
+
+80 NoT_AP 
+NoT Network (isolated smart devices like CCTV cams, allow out to HA and NAS only, no internet)
+
+90 UNTRUSTED_AP (Guest wifi etc, allow out to internet, block to other VLANs)
+
+70 Trusted devices connected remotely via Wireguard (allow out to any) - TBC
+
+80 Outbound VPN (primarily for sailing the high seas or evading geoblocking, allow out to internal VLANs and internet routed via VPN gateway, block out to WAN gateway) - TBC
+
+99 Management VLAN 
+
+
