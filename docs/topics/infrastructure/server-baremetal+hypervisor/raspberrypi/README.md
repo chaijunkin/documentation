@@ -18,6 +18,20 @@ static domain_name_servers=192.168.99.1
 static ip_address=192.168.99.99/24
 
 
+
+##### Step 5 for network SSID connection configuration
+network={
+ssid="chaifamily-SVC"
+scan_ssid=1
+key_mgmt=WPA-PSK
+}
+
+network={
+ssid="chaifamily-2.4G"
+scan_ssid=1
+key_mgmt=WPA-PSK
+}
+### OTHERS
 /etc/dnsmasq.d/99-k8s-gateway-forward.conf
 
 ## restart dns

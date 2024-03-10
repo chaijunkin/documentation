@@ -7,3 +7,14 @@ drawbacks:
 - external dependency
 - need to handle backups differently
 - need some other computer to run these on
+
+
+## psql generic command
+
+```
+k exec -it pod/postgres-1 -n database -- sh
+
+psql
+
+\l
+```
